@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int randNo = 42; 
+    int guess, attempts = 0;
+    cout << "***** NUMBER GUESSING GAME *****" << endl;
+    cout << "Guess the number I have chosen between 1 and 100!" << endl;
+    do {
+        cout << "Enter your guess: ";
+        cin >> guess;
+        attempts++;
+        if (guess < randNo) {
+            cout << "Too low! Try again.\n";
+        } else if (guess > randNo) {
+            cout << "Too high! Try again.\n";
+        } else {
+            cout << "Congratulations! You guessed it in " << attempts << " attempts.\n";
+        }
+    } while (guess != randNo);
+    return 0;
+}
